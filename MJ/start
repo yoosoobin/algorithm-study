@@ -1,0 +1,29 @@
+# 1747 (실버1)
+
+#조건 1 : 소수 / 조건 2 :팰린드롬
+
+def prime(x) :
+    for i in range(2,x):
+        if x % i == 0 :
+            return False
+        
+    return True
+
+
+input_number = int(input())
+answer = 0
+
+for i in range(input_number, 1000000 + 1) :
+    if i == 1 :
+        continue
+    if str(i) == str(i)[::-1]:
+        if prime(i) == True :
+            answer = i
+            break
+            
+if result == 0: # 입력값이 만약 최대 값 100만일 경우
+    result = 1003001 # 100만 이상이면서 팰림드롬 및 소수일 경우를 적용
+
+            
+print(answer)
+            
